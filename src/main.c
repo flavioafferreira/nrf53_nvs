@@ -79,6 +79,7 @@ void main(void)
 	 *	starting at NVS_PARTITION_OFFSET
 	 */
 	fs.flash_device = NVS_PARTITION_DEVICE;
+	//fs.flash_device = FIXED_PARTITION_DEVICE(external_flash);
 	if (!device_is_ready(fs.flash_device)) {
 		printk("Flash device %s is not ready\n", fs.flash_device->name);
 		return;
@@ -90,7 +91,7 @@ void main(void)
 		return;
 	}
 	fs.sector_size = info.size;
-	fs.sector_count = 3U;
+	fs.sector_count = 2048U; //NUMBER OF SECTORS total 0X800000 BYTES
 
 	rc = nvs_mount(&fs);
 	if (rc) {
