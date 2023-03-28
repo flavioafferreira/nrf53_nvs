@@ -139,7 +139,7 @@
 
 
  
-
+/* 
 &mx25r64 {
 		
 	partitions {
@@ -181,7 +181,7 @@
 	};
 
 };
-
+*/
 
 &pinctrl {
 	uart2_default: uart2_default {
