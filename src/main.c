@@ -79,7 +79,7 @@ void main(void)
 	 *	starting at NVS_PARTITION_OFFSET
 	 */
 	fs.flash_device = NVS_PARTITION_DEVICE;
-	//fs.flash_device = FIXED_PARTITION_DEVICE(external_flash);
+	
 	if (!device_is_ready(fs.flash_device)) {
 		printk("Flash device %s is not ready\n", fs.flash_device->name);
 		return;
